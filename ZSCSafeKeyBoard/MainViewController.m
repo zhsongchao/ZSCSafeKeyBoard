@@ -13,11 +13,13 @@
 
 
 @interface MainViewController ()<KeyBoardShowViewDelegate,UITextFieldDelegate>
+
+@property (nonatomic, strong) Base64KeyBoardView * keyBoardView;
+
 @property (weak, nonatomic) IBOutlet UITextField *nameTextFile;
 @property (weak, nonatomic) IBOutlet UITextField *paseWordTextFile;
 - (IBAction)pushClick:(id)sender;
 
-@property (nonatomic, strong) Base64KeyBoardView * keyBoardView;
 @property (nonatomic,strong) NSString *nameStr;
 @property (nonatomic,strong) NSString *namePlaseStr;
 
@@ -45,7 +47,7 @@
     self.keyBoardView = [Base64KeyBoardView KeyBoardMenu];
     self.keyBoardView.delegate = self;
     self.keyBoardView.BlockChnagkeyBoard = ^(UIView *v){
-        NSLog(@"11");
+        NSLog(@"改变键盘格式");
     };
     self.nameTextFile.inputView = [self.keyBoardView NumberKeyBoardShowView];
     self.paseWordTextFile.inputView = [self.keyBoardView NumberKeyBoardShowView];
@@ -93,7 +95,6 @@
 #pragma mark - 点击键盘上的隐藏按钮时键盘下移
 
 - (void)keyBoardAnmitionDown{
-    
     /**
      本不想用这个方法，但是修改viewController的keyBoard的frame没有效果，暂时没有找到别的办法，求指点
      */

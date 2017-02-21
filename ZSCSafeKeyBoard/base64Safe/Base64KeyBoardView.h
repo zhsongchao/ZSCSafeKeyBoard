@@ -50,7 +50,6 @@ typedef void(^ChangKeyBoard)(UIView *);
 
 @interface Base64KeyBoardView : UIView
 
-
 @property (nonatomic, assign) id<KeyBoardShowViewDelegate>  delegate;
 
 @property (nonatomic, copy) ChangKeyBoard  BlockChnagkeyBoard;
