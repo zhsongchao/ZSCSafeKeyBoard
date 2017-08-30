@@ -21,10 +21,10 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
 {
     if (text && ![text isEqualToString:LocalStr_None]) {
         //取项目的bundleIdentifier作为KEY
-        // NSString *key = [[NSBundle mainBundle] bundleIdentifier];
+        NSString *key = [[NSBundle mainBundle] bundleIdentifier];
         NSData *data = [text dataUsingEncoding:NSUTF8StringEncoding];
         //IOS 自带DES加密 Begin
-        //data = [self DESEncrypt:data WithKey:key];
+        data = [self DESEncrypt:data WithKey:key];
         //IOS 自带DES加密 End
         return [self base64EncodedStringFrom:data];
     }
@@ -38,7 +38,7 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     if (base64 && ![base64 isEqualToString:LocalStr_None]) {
         NSLog(@"base640-0-0-0%ld",base64.length);
         //取项目的bundleIdentifier作为KEY
-        //NSString *key = [[NSBundle mainBundle] bundleIdentifier];
+        NSString *key = [[NSBundle mainBundle] bundleIdentifier];
         
 //        NSString * resultStr;
         
@@ -61,10 +61,10 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
 //            resultStr = base64;
 //        }else if( ascii >= ascii_0 && ascii <= ascii_9){
 //            NSLog(@"0-9 :%d",ascii);
-            //IOS 自带DES解密 Begin
-            // data = [self DESDecrypt:data WithKey:key];
-            //IOS 自带DES加密 End
         NSData *data = [self dataWithBase64EncodedString:base64];
+            //IOS 自带DES解密 Begin
+             data = [self DESDecrypt:data WithKey:key];
+            //IOS 自带DES加密 End
         NSString * resultStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 //        }
         NSLog(@"resultStr解密后%@",resultStr);
