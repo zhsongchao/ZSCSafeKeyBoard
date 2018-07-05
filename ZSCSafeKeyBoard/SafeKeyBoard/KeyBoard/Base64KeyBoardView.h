@@ -33,7 +33,7 @@ typedef enum  {
 @required
 -(void)getKeyBoardViewValueFromButton:(NSString * )ButtonTxt DidSelectButTag:(NSInteger) BtnTag;
 /**获取第二个*/
-- (void)getSecondKeyBoardViewValueFromButton:(NSString *)ButtonTxt DidSelectButTag:(NSInteger) BtnTag;
+//- (void)getSecondKeyBoardViewValueFromButton:(NSString *)ButtonTxt DidSelectButTag:(NSInteger) BtnTag;
 /**键盘下移*/
 - (void)keyBoardAnmitionDown;
 /**
