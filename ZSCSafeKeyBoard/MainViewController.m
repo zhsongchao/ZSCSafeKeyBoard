@@ -9,25 +9,18 @@
 #import "MainViewController.h"
 #import "ViewController.h"
 #import "HZCommanFunc.h"
-#import "Base64KeyBoardView.h"
+#import "KeyBoardManager.h"
 
 
-@interface MainViewController ()<KeyBoardShowViewDelegate,UITextFieldDelegate>
-
-@property (nonatomic, strong) Base64KeyBoardView * keyBoardView;
+@interface MainViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextFile;
 @property (weak, nonatomic) IBOutlet UITextField *paseWordTextFile;
 - (IBAction)pushClick:(id)sender;
 
-@property (nonatomic,strong) NSString *nameStr;
-@property (nonatomic,strong) NSString *namePlaseStr;
+@property (nonatomic,strong)  KeyBoardManager *manager;
 
-@property (nonatomic,strong) NSString *passStr;
-@property (nonatomic,strong) NSString *passPlaseStr;
-
-
-
+@property (nonatomic,strong)  KeyBoardManager *manager2;
 
 @end
 
@@ -36,88 +29,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"base64安全键盘";
-    self.nameTextFile.delegate = self;
-    self.paseWordTextFile.delegate = self;
+
     self.nameTextFile.clearButtonMode = UITextFieldViewModeAlways;
     self.paseWordTextFile.clearButtonMode = UITextFieldViewModeAlways;
     [self initBase64KeyBoardView];
 }
 
 - (void)initBase64KeyBoardView{
-    self.keyBoardView = [Base64KeyBoardView KeyBoardMenu];
-    self.keyBoardView.delegate = self;
-    self.keyBoardView.BlockChnagkeyBoard = ^(UIView *v){
-        NSLog(@"改变键盘格式");
+    KeyBoardManager *manager = [KeyBoardManager Manager];
+    [manager Base64KeyBoardWithTextField:self.nameTextFile type:(CharacterKeyBoardShowView)];
+    self.manager = manager;
+    
+    //textField的代理会被拦截 所以有什么类似需要 按钮 是否可用之类的状态可以在这个block中处理
+    __weak __typeof(self) weakSelf = self;
+    self.manager.inputInfoBlock = ^(NSString *str,UITextField *curretnTF){
+        [weakSelf updateBtnStatus];
     };
-    self.nameTextFile.inputView = [self.keyBoardView NumberKeyBoardShowView];
-    self.paseWordTextFile.inputView = [self.keyBoardView NumberKeyBoardShowView];
-}
-
-
-
--(void)textFieldDidBeginEditing:(UITextField *)textField {
-    if (textField == self.nameTextFile) {
-        self.keyBoardView.TextSelectPostion = TextFiledFirst;
-    }
-    if (textField == self.paseWordTextFile) {
-        
-        self.keyBoardView.TextSelectPostion = TextFiledSecond;
-    }
-}
-#pragma mark - 清除按钮点击事件
-- (BOOL)textFieldShouldClear:(UITextField *)textField{
-    [self.keyBoardView base64TextFieldShouldClear];
-    return YES;
-}
-
--(void)getKeyBoardViewValueFromButton:(NSString * )ButtonTxt DidSelectButTag:(NSInteger) BtnTag {
-    NSLog(@"----键盘传过来的数据：%@",ButtonTxt);
-    self.nameStr = [Base64KeyBoardView returnByArryCount:ButtonTxt];
-    self.nameTextFile.text = self.nameStr;
-    self.namePlaseStr = ButtonTxt;
-}
-
-- (void)getSecondKeyBoardViewValueFromButton:(NSString *)ButtonTxt DidSelectButTag:(NSInteger) BtnTag {
     
-    self.passStr = [Base64KeyBoardView returnByArryCount:ButtonTxt];
-    NSLog(@"----222222输入数据：%@",self.passStr);
-    self.paseWordTextFile.text = self.passStr;
-    self.passPlaseStr = ButtonTxt;
-    
+    KeyBoardManager *manager2 = [KeyBoardManager Manager];
+    [manager2 Base64KeyBoardWithTextField:self.paseWordTextFile type:(CharacterKeyBoardShowView)];
+    self.manager2 = manager2;
 }
 
 - (IBAction)pushClick:(id)sender {
     ViewController *vc = [[ViewController alloc]init];
-    vc.unLockBase64Str =  [NSString stringWithFormat:@"加密用户名：%@\n加密密码:%@\n用户名：%@ \n密码：%@",self.namePlaseStr,self.passPlaseStr,[Base64KeyBoardView tranceBaseToString:self.namePlaseStr],[Base64KeyBoardView tranceBaseToString:self.passPlaseStr]];
-    NSLog(@"用户名的长度%ld=密码的长度%ld",[Base64KeyBoardView tranceBaseToString:self.namePlaseStr].length,[Base64KeyBoardView tranceBaseToString:self.passPlaseStr].length);
+    vc.unLockBase64Str =  [NSString stringWithFormat:@"用户名：%@ \n密码：%@",[self.manager deCodeStr],[self.manager2 deCodeStr]];
+
    [self.navigationController pushViewController:vc animated:YES];
 }
-#pragma mark - 点击键盘上的隐藏按钮时键盘下移
 
-- (void)keyBoardAnmitionDown{
-    /**
-     本不想用这个方法，但是修改viewController的keyBoard的frame没有效果，暂时没有找到别的办法，求指点
-     */
-    if ([self.nameTextFile isFirstResponder])
-    {
-        [self.nameTextFile resignFirstResponder];
-    }
-    if ([self.paseWordTextFile isFirstResponder])
-    {
-        [self.paseWordTextFile resignFirstResponder];
-    }
+- (void)updateBtnStatus {
+    NSLog(@"啊!我又被改变了,来打我呀");
 }
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    if ([self.nameTextFile isFirstResponder])
-    {
-        [self.nameTextFile resignFirstResponder];
-    }
-    if ([self.paseWordTextFile isFirstResponder])
-    {
-        [self.paseWordTextFile resignFirstResponder];
-    }
-}
-
 @end

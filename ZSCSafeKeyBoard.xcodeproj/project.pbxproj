@@ -16,12 +16,13 @@
 		0E8FA2891E5587ED0035EB72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E8FA2871E5587ED0035EB72 /* LaunchScreen.storyboard */; };
 		0E8FA2931E55885F0035EB72 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8FA2911E55885F0035EB72 /* MainViewController.m */; };
 		0E8FA2941E55885F0035EB72 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8FA2921E55885F0035EB72 /* MainViewController.xib */; };
-		0E8FA2A11E558A8C0035EB72 /* congsoleImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E8FA29A1E558A8C0035EB72 /* congsoleImage@2x.png */; };
-		0E8FA2A21E558A8C0035EB72 /* UIControl+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8FA29D1E558A8C0035EB72 /* UIControl+Category.m */; };
-		0E8FA2A31E558A8C0035EB72 /* UIImage+FitWithImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8FA29F1E558A8C0035EB72 /* UIImage+FitWithImage.m */; };
-		0E8FA2A41E558A8C0035EB72 /* whiteBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E8FA2A01E558A8C0035EB72 /* whiteBack@2x.png */; };
-		0E8FA2A71E559A240035EB72 /* HZCommanFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8FA2A61E559A240035EB72 /* HZCommanFunc.m */; };
-		0E8FA2B01E559C200035EB72 /* Base64KeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8FA2AF1E559C200035EB72 /* Base64KeyBoardView.m */; };
+		A0795FC220EDC0C60043A1BB /* HZCommanFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = A0795FB320EDC0C60043A1BB /* HZCommanFunc.m */; };
+		A0795FC320EDC0C60043A1BB /* KeyBoardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0795FB520EDC0C60043A1BB /* KeyBoardManager.m */; };
+		A0795FC420EDC0C60043A1BB /* UIImage+FitWithImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A0795FB820EDC0C60043A1BB /* UIImage+FitWithImage.m */; };
+		A0795FC520EDC0C60043A1BB /* UIControl+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A0795FBC20EDC0C60043A1BB /* UIControl+Category.m */; };
+		A0795FC620EDC0C60043A1BB /* whiteBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0795FBD20EDC0C60043A1BB /* whiteBack@2x.png */; };
+		A0795FC720EDC0C60043A1BB /* Base64KeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0795FBE20EDC0C60043A1BB /* Base64KeyBoardView.m */; };
+		A0795FC820EDC0C60043A1BB /* congsoleImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0795FC120EDC0C60043A1BB /* congsoleImage@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,18 +40,21 @@
 		0E8FA2901E55885F0035EB72 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		0E8FA2911E55885F0035EB72 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		0E8FA2921E55885F0035EB72 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		0E8FA2991E558A8C0035EB72 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
-		0E8FA29A1E558A8C0035EB72 /* congsoleImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "congsoleImage@2x.png"; sourceTree = "<group>"; };
-		0E8FA29B1E558A8C0035EB72 /* KeyBoardConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyBoardConfig.h; sourceTree = "<group>"; };
-		0E8FA29C1E558A8C0035EB72 /* UIControl+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Category.h"; sourceTree = "<group>"; };
-		0E8FA29D1E558A8C0035EB72 /* UIControl+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Category.m"; sourceTree = "<group>"; };
-		0E8FA29E1E558A8C0035EB72 /* UIImage+FitWithImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FitWithImage.h"; sourceTree = "<group>"; };
-		0E8FA29F1E558A8C0035EB72 /* UIImage+FitWithImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FitWithImage.m"; sourceTree = "<group>"; };
-		0E8FA2A01E558A8C0035EB72 /* whiteBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteBack@2x.png"; sourceTree = "<group>"; };
-		0E8FA2A51E559A240035EB72 /* HZCommanFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZCommanFunc.h; sourceTree = "<group>"; };
-		0E8FA2A61E559A240035EB72 /* HZCommanFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCommanFunc.m; sourceTree = "<group>"; };
-		0E8FA2AE1E559C200035EB72 /* Base64KeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64KeyBoardView.h; sourceTree = "<group>"; };
-		0E8FA2AF1E559C200035EB72 /* Base64KeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64KeyBoardView.m; sourceTree = "<group>"; };
+		A0795FB220EDC0C60043A1BB /* HZCommanFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZCommanFunc.h; sourceTree = "<group>"; };
+		A0795FB320EDC0C60043A1BB /* HZCommanFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCommanFunc.m; sourceTree = "<group>"; };
+		A0795FB520EDC0C60043A1BB /* KeyBoardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBoardManager.m; sourceTree = "<group>"; };
+		A0795FB620EDC0C60043A1BB /* KeyBoardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyBoardManager.h; sourceTree = "<group>"; };
+		A0795FB820EDC0C60043A1BB /* UIImage+FitWithImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FitWithImage.m"; sourceTree = "<group>"; };
+		A0795FB920EDC0C60043A1BB /* Base64KeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64KeyBoardView.h; sourceTree = "<group>"; };
+		A0795FBA20EDC0C60043A1BB /* KeyBoardConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyBoardConfig.h; sourceTree = "<group>"; };
+		A0795FBB20EDC0C60043A1BB /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		A0795FBC20EDC0C60043A1BB /* UIControl+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Category.m"; sourceTree = "<group>"; };
+		A0795FBD20EDC0C60043A1BB /* whiteBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteBack@2x.png"; sourceTree = "<group>"; };
+		A0795FBE20EDC0C60043A1BB /* Base64KeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64KeyBoardView.m; sourceTree = "<group>"; };
+		A0795FBF20EDC0C60043A1BB /* UIImage+FitWithImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FitWithImage.h"; sourceTree = "<group>"; };
+		A0795FC020EDC0C60043A1BB /* UIControl+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Category.h"; sourceTree = "<group>"; };
+		A0795FC120EDC0C60043A1BB /* congsoleImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "congsoleImage@2x.png"; sourceTree = "<group>"; };
+		A0795FCA20EDC2110043A1BB /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +87,7 @@
 		0E8FA2751E5587ED0035EB72 /* ZSCSafeKeyBoard */ = {
 			isa = PBXGroup;
 			children = (
-				0E8FA2981E558A8C0035EB72 /* base64Safe */,
+				A0795FB020EDC0C60043A1BB /* SafeKeyBoard */,
 				0E8FA2791E5587ED0035EB72 /* AppDelegate.h */,
 				0E8FA27A1E5587ED0035EB72 /* AppDelegate.m */,
 				0E8FA27C1E5587ED0035EB72 /* ViewController.h */,
@@ -109,23 +113,50 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0E8FA2981E558A8C0035EB72 /* base64Safe */ = {
+		A0795FB020EDC0C60043A1BB /* SafeKeyBoard */ = {
 			isa = PBXGroup;
 			children = (
-				0E8FA2991E558A8C0035EB72 /* Config.h */,
-				0E8FA29B1E558A8C0035EB72 /* KeyBoardConfig.h */,
-				0E8FA29C1E558A8C0035EB72 /* UIControl+Category.h */,
-				0E8FA29D1E558A8C0035EB72 /* UIControl+Category.m */,
-				0E8FA2A51E559A240035EB72 /* HZCommanFunc.h */,
-				0E8FA2A61E559A240035EB72 /* HZCommanFunc.m */,
-				0E8FA29E1E558A8C0035EB72 /* UIImage+FitWithImage.h */,
-				0E8FA29F1E558A8C0035EB72 /* UIImage+FitWithImage.m */,
-				0E8FA29A1E558A8C0035EB72 /* congsoleImage@2x.png */,
-				0E8FA2A01E558A8C0035EB72 /* whiteBack@2x.png */,
-				0E8FA2AE1E559C200035EB72 /* Base64KeyBoardView.h */,
-				0E8FA2AF1E559C200035EB72 /* Base64KeyBoardView.m */,
+				A0795FCA20EDC2110043A1BB /* Singleton.h */,
+				A0795FB120EDC0C60043A1BB /* Base64 */,
+				A0795FB420EDC0C60043A1BB /* Manager */,
+				A0795FB720EDC0C60043A1BB /* KeyBoard */,
 			);
-			path = base64Safe;
+			path = SafeKeyBoard;
+			sourceTree = "<group>";
+		};
+		A0795FB120EDC0C60043A1BB /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				A0795FB220EDC0C60043A1BB /* HZCommanFunc.h */,
+				A0795FB320EDC0C60043A1BB /* HZCommanFunc.m */,
+			);
+			path = Base64;
+			sourceTree = "<group>";
+		};
+		A0795FB420EDC0C60043A1BB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A0795FB620EDC0C60043A1BB /* KeyBoardManager.h */,
+				A0795FB520EDC0C60043A1BB /* KeyBoardManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A0795FB720EDC0C60043A1BB /* KeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				A0795FB820EDC0C60043A1BB /* UIImage+FitWithImage.m */,
+				A0795FB920EDC0C60043A1BB /* Base64KeyBoardView.h */,
+				A0795FBA20EDC0C60043A1BB /* KeyBoardConfig.h */,
+				A0795FBB20EDC0C60043A1BB /* Config.h */,
+				A0795FBC20EDC0C60043A1BB /* UIControl+Category.m */,
+				A0795FBD20EDC0C60043A1BB /* whiteBack@2x.png */,
+				A0795FBE20EDC0C60043A1BB /* Base64KeyBoardView.m */,
+				A0795FBF20EDC0C60043A1BB /* UIImage+FitWithImage.h */,
+				A0795FC020EDC0C60043A1BB /* UIControl+Category.h */,
+				A0795FC120EDC0C60043A1BB /* congsoleImage@2x.png */,
+			);
+			path = KeyBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,10 +217,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E8FA2891E5587ED0035EB72 /* LaunchScreen.storyboard in Resources */,
-				0E8FA2A41E558A8C0035EB72 /* whiteBack@2x.png in Resources */,
+				A0795FC620EDC0C60043A1BB /* whiteBack@2x.png in Resources */,
 				0E8FA2861E5587ED0035EB72 /* Assets.xcassets in Resources */,
 				0E8FA2811E5587ED0035EB72 /* Main.storyboard in Resources */,
-				0E8FA2A11E558A8C0035EB72 /* congsoleImage@2x.png in Resources */,
+				A0795FC820EDC0C60043A1BB /* congsoleImage@2x.png in Resources */,
 				0E8FA2941E55885F0035EB72 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,15 +232,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E8FA2A21E558A8C0035EB72 /* UIControl+Category.m in Sources */,
 				0E8FA2841E5587ED0035EB72 /* ZSCSafeKeyBoard.xcdatamodeld in Sources */,
-				0E8FA2A71E559A240035EB72 /* HZCommanFunc.m in Sources */,
 				0E8FA27E1E5587ED0035EB72 /* ViewController.m in Sources */,
-				0E8FA2B01E559C200035EB72 /* Base64KeyBoardView.m in Sources */,
+				A0795FC720EDC0C60043A1BB /* Base64KeyBoardView.m in Sources */,
 				0E8FA27B1E5587ED0035EB72 /* AppDelegate.m in Sources */,
 				0E8FA2931E55885F0035EB72 /* MainViewController.m in Sources */,
+				A0795FC420EDC0C60043A1BB /* UIImage+FitWithImage.m in Sources */,
 				0E8FA2781E5587ED0035EB72 /* main.m in Sources */,
-				0E8FA2A31E558A8C0035EB72 /* UIImage+FitWithImage.m in Sources */,
+				A0795FC520EDC0C60043A1BB /* UIControl+Category.m in Sources */,
+				A0795FC220EDC0C60043A1BB /* HZCommanFunc.m in Sources */,
+				A0795FC320EDC0C60043A1BB /* KeyBoardManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
